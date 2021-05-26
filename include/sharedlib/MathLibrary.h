@@ -1,13 +1,10 @@
 // Example from:
 //   https://docs.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp
 
-#pragma once
+#ifndef LIB_MATH_LIBRARY_HPP
+#define LIB_MATH_LIBRARY_HPP
 
-#ifdef MATHLIBRARY_EXPORTS
-#define MATHLIBRARY_API __declspec(dllexport)
-#else
-#define MATHLIBRARY_API __declspec(dllimport)
-#endif
+#include <sharedlib/Config.hpp>
 
 // The Fibonacci recurrence relation describes a sequence F
 // where F(n) is { n = 0, a
@@ -21,16 +18,18 @@
 // Initialize a Fibonacci relation sequence
 // such that F(0) = a, F(1) = b.
 // This function must be called before any other function.
-extern "C" MATHLIBRARY_API void fibonacci_init(
+extern "C" LIB_MATH_API void fibonacci_init(
     const unsigned long long a, const unsigned long long b);
 
 // Produce the next value in the sequence.
 // Returns true on success and updates current value and index;
 // false on overflow, leaves current value and index unchanged.
-extern "C" MATHLIBRARY_API bool fibonacci_next();
+extern "C" LIB_MATH_API bool fibonacci_next();
 
 // Get the current value in the sequence.
-extern "C" MATHLIBRARY_API unsigned long long fibonacci_current();
+extern "C" LIB_MATH_API unsigned long long fibonacci_current();
 
 // Get the position of the current value in the sequence.
-extern "C" MATHLIBRARY_API unsigned int fibonacci_index();
+extern "C" LIB_MATH_API unsigned int fibonacci_index();
+
+#endif // LIB_MATH_LIBRARY_HPP

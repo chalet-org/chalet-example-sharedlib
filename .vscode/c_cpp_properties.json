@@ -41,7 +41,7 @@
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/src/PCH.hpp"
+                "${workspaceFolder}/src/main/PCH.hpp"
             ]
         },
         {
@@ -62,7 +62,7 @@
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/src/PCH.hpp"
+                "${workspaceFolder}/src/main/PCH.hpp"
             ]
         }
     ],
