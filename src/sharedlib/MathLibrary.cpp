@@ -4,7 +4,7 @@
 #include <utility>
 #include <limits.h>
 
-#include <sharedlib/MathLibrary.h>
+#include <sharedlib/MathLibrary.hpp>
 
 // DLL internal state variables:
 static unsigned long long previous_;  // Previous value, if any
