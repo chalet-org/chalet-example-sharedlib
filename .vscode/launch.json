@@ -5,7 +5,7 @@
 			"name": "MSVC",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/build/Debug/sharedlib-test",
+			"program": "${workspaceFolder}/build/Debug/sharedlib-test.exe",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
@@ -17,7 +17,7 @@
 			"name": "GDB/LLDB",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/build/Debug/chalet-example-mono",
+			"program": "${workspaceFolder}/build/Debug/sharedlib-test",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
@@ -25,7 +25,7 @@
 			"externalConsole": false,
 			"internalConsoleOptions": "neverOpen",
 			"windows": {
-				"program": "${workspaceFolder}/build/Debug/chalet-example-mono.exe",
+				"program": "${workspaceFolder}/build/Debug/sharedlib-test.exe",
 				"MIMode": "gdb",
 				"miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe"
 			},

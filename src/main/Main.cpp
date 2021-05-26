@@ -1,3 +1,6 @@
+// Example from:
+//   https://docs.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp
+
 #include <iostream>
 
 #include <sharedlib/MathLibrary.hpp>
