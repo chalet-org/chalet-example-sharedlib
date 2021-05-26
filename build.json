@@ -1,0 +1,40 @@
+{
+	"version": "0.0.1",
+	"workspace": "chalet-example-sharedlib",
+	"environment": {
+		"showCommands": false,
+		"path": []
+	},
+	"templates:all": {
+		"dumpAssembly": false,
+		"language": "C++",
+		"compilerSettings:Cxx": {
+			"cppStandard": "c++17",
+			"warnings": "pedantic",
+			"pch": "src/PCH.hpp",
+			"includeDirs": [
+				"include"
+			]
+		}
+	},
+	"projects": {
+		"sharedlib": {
+			"kind": "sharedLibrary",
+			"files": [
+				"src/sharedlib/MathLibrary.cpp"
+			],
+			"compilerSettings:Cxx": {
+				"defines": [
+					"MATHLIBRARY_EXPORTS"
+				]
+			}
+		},
+		"sharedlib-test": {
+			"kind": "consoleApplication",
+			"files": [
+				"src/main/Main.cpp"
+			],
+			"runProject": true
+		}
+	}
+}

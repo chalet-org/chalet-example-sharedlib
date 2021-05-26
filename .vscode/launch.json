@@ -1,0 +1,17 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "MSVC",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/Debug/sharedlib-test",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"envFile": "${workspaceFolder}/.env.windows",
+			"preLaunchTask": "Build: Debug"
+		}
+	]
+}
