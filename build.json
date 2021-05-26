@@ -11,7 +11,6 @@
 		"compilerSettings:Cxx": {
 			"cppStandard": "c++17",
 			"warnings": "pedantic",
-			"pch": "src/PCH.hpp",
 			"includeDirs": [
 				"include"
 			]
@@ -20,21 +19,21 @@
 	"projects": {
 		"sharedlib": {
 			"kind": "sharedLibrary",
-			"files": [
-				"src/sharedlib/MathLibrary.cpp"
-			],
+			"location":"src/sharedlib",
 			"compilerSettings:Cxx": {
-				"defines": [
-					"MATHLIBRARY_EXPORTS"
-				]
+				"pch": "src/sharedlib/PCH.hpp"
 			}
 		},
 		"sharedlib-test": {
 			"kind": "consoleApplication",
-			"files": [
-				"src/main/Main.cpp"
-			],
-			"runProject": true
+			"runProject": true,
+			"location":"src/main",
+			"compilerSettings:Cxx": {
+				"pch": "src/main/PCH.hpp",
+				"links": [
+					"sharedlib"
+				]
+			}
 		}
 	}
 }

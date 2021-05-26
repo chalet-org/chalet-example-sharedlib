@@ -1,0 +1,7 @@
+#ifndef MAIN_PRECOMPILED_HEADER_HPP
+#define MAIN_PRECOMPILED_HEADER_HPP
+
+#include <sharedlib/PCH.hpp>
+
+#endif // MAIN_PRECOMPILED_HEADER_HPP
+

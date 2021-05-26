@@ -1,0 +1,11 @@
+#ifndef LIB_PRECOMPILED_HEADER_HPP
+#define LIB_PRECOMPILED_HEADER_HPP
+
+#ifndef MATHLIBRARY_EXPORTS
+	#define MATHLIBRARY_EXPORTS
+#endif
+
+#include <sharedlib/PCH.hpp>
+
+#endif // LIB_PRECOMPILED_HEADER_HPP
+
