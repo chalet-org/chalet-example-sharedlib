@@ -23,6 +23,9 @@ int main()
 			  << "unsigned 64-bit integer."
 			  << std::endl;
 
+    std::cout << "sizeof(void*): " << sizeof(void*)
+              << std::endl;
+
 	return 0;
 }
 
