@@ -1,14 +1,10 @@
 {
 	"version": "0.0.1",
 	"workspace": "chalet-example-sharedlib",
-	"environment": {
-		"showCommands": false,
-		"path": []
-	},
-	"templates:all": {
-		"dumpAssembly": false,
+	"path": [],
+	"abstracts:all": {
 		"language": "C++",
-		"compilerSettings:Cxx": {
+		"settings:Cxx": {
 			"cppStandard": "c++17",
 			"warnings": "pedantic",
 			"includeDirs": [
@@ -16,11 +12,11 @@
 			]
 		}
 	},
-	"projects": {
+	"targets": {
 		"sharedlib": {
 			"kind": "sharedLibrary",
 			"location":"src/sharedlib",
-			"compilerSettings:Cxx": {
+			"settings:Cxx": {
 				"pch": "src/sharedlib/PCH.hpp"
 			}
 		},
@@ -28,7 +24,7 @@
 			"kind": "consoleApplication",
 			"runProject": true,
 			"location":"src/main",
-			"compilerSettings:Cxx": {
+			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
 				"links": [
 					"sharedlib"
