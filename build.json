@@ -31,5 +31,21 @@
 				]
 			}
 		}
+	},
+	"distribution": {
+		"bin": {
+			"outDir": "dist/bin",
+			"configuration": "Release",
+			"projects": [
+				"sharedlib-test"
+			]
+		},
+		"lib": {
+			"outDir": "dist/lib",
+			"configuration": "Release",
+			"projects": [
+				"sharedlib"
+			]
+		}
 	}
 }
