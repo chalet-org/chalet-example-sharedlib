@@ -13,6 +13,13 @@
 		}
 	},
 	"targets": {
+		"sharedlib-static": {
+			"kind": "staticLibrary",
+			"location":"src/sharedlib",
+			"settings:Cxx": {
+				"pch": "src/sharedlib/PCH.hpp"
+			}
+		},
 		"sharedlib": {
 			"kind": "sharedLibrary",
 			"location":"src/sharedlib",
@@ -44,7 +51,7 @@
 			"outDir": "dist/lib",
 			"configuration": "Release",
 			"projects": [
-				"sharedlib"
+				"sharedlib-static"
 			]
 		}
 	}

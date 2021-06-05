@@ -34,7 +34,7 @@
 				"miDebuggerPath": "/usr/bin/gdb"
 			},
 			"osx": {
-				"program": "${workspaceFolder}/build/x86_64-apple-darwin20.3.0_Debug/sharedlib-test",
+				"program": "${workspaceFolder}/build/x86_64-apple-darwin_Debug/sharedlib-test",
 				"MIMode": "lldb"
 			}
 		}
