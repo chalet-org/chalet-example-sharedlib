@@ -45,7 +45,10 @@
 			"configuration": "Release",
 			"projects": [
 				"sharedlib-test"
-			]
+			],
+			"macos": {
+				"universalBinary": true
+			}
 		},
 		"lib": {
 			"outDir": "dist/lib",
