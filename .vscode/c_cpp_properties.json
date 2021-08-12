@@ -3,6 +3,7 @@
         {
             "name": "Linux",
             "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/g++",
             "includePath": [
 				"${workspaceFolder}/include",
 				"${workspaceFolder}/src/sharedlib",
@@ -17,7 +18,7 @@
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/src/PCH.hpp"
+                "${workspaceFolder}/src/main/PCH.hpp"
             ]
         },
         {
