@@ -13,6 +13,7 @@
 	},
 	"targets": {
 		"sharedlib-static": {
+			"description": "Static library version",
 			"kind": "staticLibrary",
 			"location":"src/sharedlib",
 			"settings:Cxx": {
@@ -20,6 +21,7 @@
 			}
 		},
 		"sharedlib": {
+			"description": "Shared library version",
 			"kind": "sharedLibrary",
 			"location":"src/sharedlib",
 			"settings:Cxx": {
@@ -27,6 +29,7 @@
 			}
 		},
 		"sharedlib-test": {
+			"description": "Unit Tests",
 			"kind": "consoleApplication",
 			"runProject": true,
 			"location":"src/main",
@@ -40,16 +43,15 @@
 	},
 	"distribution": {
 		"bin": {
+			"description": "bin folder",
 			"outDir": "dist/bin",
 			"configuration": "Release",
 			"projects": [
 				"sharedlib-test"
-			],
-			"macos": {
-				"universalBinary": true
-			}
+			]
 		},
 		"lib": {
+			"description": "lib folder",
 			"outDir": "dist/lib",
 			"configuration": "Release",
 			"projects": [
