@@ -44,7 +44,7 @@
 	"distribution": {
 		"bin": {
 			"description": "bin folder",
-			"outDir": "dist/bin",
+			"subDirectory": "bin",
 			"configuration": "Release",
 			"projects": [
 				"sharedlib-test"
@@ -52,7 +52,7 @@
 		},
 		"lib": {
 			"description": "lib folder",
-			"outDir": "dist/lib",
+			"subDirectory": "lib",
 			"configuration": "Release",
 			"projects": [
 				"sharedlib-static"
