@@ -29,7 +29,7 @@
 			}
 		},
 		"sharedlib-test": {
-			"description": "Unit Tests",
+			"description": "Shared library tester",
 			"kind": "consoleApplication",
 			"runProject": true,
 			"location":"src/main",
