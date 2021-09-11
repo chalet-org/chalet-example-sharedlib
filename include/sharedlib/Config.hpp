@@ -4,10 +4,15 @@
 #include <sharedlib/Defines.hpp>
 
 #if defined(LIB_WIN32)
+	#if defined(LIB_SHARED)
 		#define LIB_API_EXPORT __declspec(dllexport)
 		#define LIB_API_IMPORT __declspec(dllimport)
+	#else
+        #define LIB_API_EXPORT
+        #define LIB_API_IMPORT
+	#endif
 #else
-	 #if __GNUC__ >= 4
+	 #if defined(LIB_SHARED) && __GNUC__ >= 4
         #define LIB_API_EXPORT __attribute__((__visibility__("default")))
         #define LIB_API_IMPORT __attribute__((__visibility__("default")))
 	 #else

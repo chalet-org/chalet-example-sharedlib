@@ -12,31 +12,45 @@
 		}
 	},
 	"targets": {
-		"sharedlib-static": {
-			"description": "Static library version",
+		"fibonacci-static": {
 			"kind": "staticLibrary",
 			"location":"src/sharedlib",
 			"settings:Cxx": {
 				"pch": "src/sharedlib/PCH.hpp"
 			}
 		},
-		"sharedlib": {
-			"description": "Shared library version",
+		"fibonacci-shared": {
 			"kind": "sharedLibrary",
 			"location":"src/sharedlib",
 			"settings:Cxx": {
-				"pch": "src/sharedlib/PCH.hpp"
+				"pch": "src/sharedlib/PCH.hpp",
+				"defines": [
+					"LIB_SHARED"
+				]
 			}
 		},
-		"sharedlib-test": {
-			"description": "Shared library tester",
+		"static-fibonacci-test": {
 			"kind": "consoleApplication",
 			"runProject": true,
 			"location":"src/main",
 			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
+				"staticLinks": [
+					"fibonacci-static"
+				]
+			}
+		},
+		"shared-fibonacci-test": {
+			"kind": "consoleApplication",
+			"runProject": true,
+			"location":"src/main",
+			"settings:Cxx": {
+				"pch": "src/main/PCH.hpp",
+				"defines": [
+					"LIB_SHARED"
+				],
 				"links": [
-					"sharedlib"
+					"fibonacci-shared"
 				]
 			}
 		}
@@ -47,15 +61,20 @@
 			"subDirectory": "bin",
 			"configuration": "Release",
 			"projects": [
-				"sharedlib-test"
+				"static-fibonacci-test",
+				"shared-fibonacci-test",
+				"fibonacci-shared"
 			]
 		},
 		"lib": {
 			"description": "lib folder",
 			"subDirectory": "lib",
 			"configuration": "Release",
+			"include": [
+				"${buildDir}/fibonacci-shared.lib"
+			],
 			"projects": [
-				"sharedlib-static"
+				"fibonacci-static"
 			]
 		}
 	}
