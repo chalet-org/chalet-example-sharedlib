@@ -70,8 +70,10 @@
 			"description": "lib folder",
 			"subDirectory": "lib",
 			"configuration": "Release",
-			"include": [
-				"${buildDir}/libfibonacci-shared.a",
+			"include.!macos": [
+				"${buildDir}/libfibonacci-shared.a"
+			],
+			"include.windows": [
 				"${buildDir}/fibonacci-shared.lib"
 			],
 			"projects": [
