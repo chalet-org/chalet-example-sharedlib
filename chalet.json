@@ -71,6 +71,7 @@
 			"subDirectory": "lib",
 			"configuration": "Release",
 			"include": [
+				"${buildDir}/libfibonacci-shared.a",
 				"${buildDir}/fibonacci-shared.lib"
 			],
 			"projects": [
