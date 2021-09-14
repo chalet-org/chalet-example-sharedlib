@@ -46,9 +46,6 @@
 			"location":"src/main",
 			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
-				"defines": [
-					"LIB_SHARED"
-				],
 				"links": [
 					"fibonacci-shared"
 				]
