@@ -30,7 +30,7 @@
 			}
 		},
 		"static-fibonacci-test": {
-			"kind": "consoleApplication",
+			"kind": "executable",
 			"runProject": true,
 			"location":"src/main",
 			"settings:Cxx": {
@@ -41,7 +41,7 @@
 			}
 		},
 		"shared-fibonacci-test": {
-			"kind": "consoleApplication",
+			"kind": "executable",
 			"runProject": true,
 			"location":"src/main",
 			"settings:Cxx": {
