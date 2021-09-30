@@ -31,7 +31,7 @@
 		},
 		"static-fibonacci-test": {
 			"kind": "executable",
-			"runProject": true,
+			"runTarget": true,
 			"location":"src/main",
 			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
@@ -42,7 +42,7 @@
 		},
 		"shared-fibonacci-test": {
 			"kind": "executable",
-			"runProject": true,
+			"runTarget": true,
 			"location":"src/main",
 			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
