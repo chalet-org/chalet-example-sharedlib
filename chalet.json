@@ -54,16 +54,18 @@
 	},
 	"distribution": {
 		"bin": {
+			"kind": "bundle",
 			"description": "bin folder",
 			"subDirectory": "bin",
 			"configuration": "Release",
-			"projects": [
+			"buildTargets": [
 				"static-fibonacci-test",
 				"shared-fibonacci-test",
 				"fibonacci-shared"
 			]
 		},
 		"lib": {
+			"kind": "bundle",
 			"description": "lib folder",
 			"subDirectory": "lib",
 			"configuration": "Release",
@@ -73,7 +75,7 @@
 			"include.windows": [
 				"${buildDir}/fibonacci-shared.lib"
 			],
-			"projects": [
+			"buildTargets": [
 				"fibonacci-static"
 			]
 		}
