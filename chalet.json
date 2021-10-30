@@ -14,14 +14,14 @@
 	"targets": {
 		"fibonacci-static": {
 			"kind": "staticLibrary",
-			"location":"src/sharedlib",
+			"location": "src/sharedlib",
 			"settings:Cxx": {
 				"pch": "src/sharedlib/PCH.hpp"
 			}
 		},
 		"fibonacci-shared": {
 			"kind": "sharedLibrary",
-			"location":"src/sharedlib",
+			"location": "src/sharedlib",
 			"settings:Cxx": {
 				"pch": "src/sharedlib/PCH.hpp",
 				"defines": [
@@ -32,7 +32,7 @@
 		"static-fibonacci-test": {
 			"kind": "executable",
 			"runTarget": true,
-			"location":"src/main",
+			"location": "src/main",
 			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
 				"staticLinks": [
@@ -43,7 +43,7 @@
 		"shared-fibonacci-test": {
 			"kind": "executable",
 			"runTarget": true,
-			"location":"src/main",
+			"location": "src/main",
 			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
 				"links": [
@@ -56,7 +56,7 @@
 		"bin": {
 			"kind": "bundle",
 			"description": "bin folder",
-			"subDirectory": "bin",
+			"subdirectory": "bin",
 			"configuration": "Release",
 			"buildTargets": [
 				"static-fibonacci-test",
@@ -67,7 +67,7 @@
 		"lib": {
 			"kind": "bundle",
 			"description": "lib folder",
-			"subDirectory": "lib",
+			"subdirectory": "lib",
 			"configuration": "Release",
 			"include.!macos": [
 				"${buildDir}/libfibonacci-shared.a"
