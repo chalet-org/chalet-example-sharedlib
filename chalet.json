@@ -1,7 +1,7 @@
 {
 	"version": "0.0.1",
 	"workspace": "chalet-example-sharedlib",
-	"abstracts:all": {
+	"abstracts:*": {
 		"language": "C++",
 		"settings:Cxx": {
 			"cppStandard": "c++17",
