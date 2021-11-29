@@ -5,19 +5,32 @@
 			"name": "MSVC",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/build/Debug/sharedlib-test.exe",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
 			"console": "integratedTerminal",
-			"envFile": "${workspaceFolder}/.env.windows",
-			"preLaunchTask": "Build: Debug"
+			"preLaunchTask": "Build: Debug",
+			"program": "${workspaceFolder}/build/x64-pc-windows-msvc17_Debug/shared-fibonacci-test.exe",
+			"envFile": "${workspaceFolder}/build/x64-pc-windows-msvc17_Debug/run.env"
 		},
 		{
-			"name": "GDB/LLDB",
+			"name": "LLDB",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/Debug/shared-fibonacci-test",
+			"args": [],
+			"stopOnEntry": false,
+			"cwd": "${workspaceFolder}",
+			"preLaunchTask": "Build: Debug",
+			"osx": {
+				"program": "${workspaceFolder}/build/x86_64-apple-darwin_Debug/shared-fibonacci-test"
+			}
+		},
+		{
+			"name": "GDB",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/build/Debug/sharedlib-test",
+			"program": "${workspaceFolder}/build/Debug/shared-fibonacci-test",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
@@ -25,17 +38,16 @@
 			"externalConsole": false,
 			"internalConsoleOptions": "neverOpen",
 			"windows": {
-				"program": "${workspaceFolder}/build/Debug/sharedlib-test.exe",
 				"MIMode": "gdb",
-				"miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe"
+				"miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
+				"program": "${workspaceFolder}/build/x86_64-w64-mingw32_Debug/shared-fibonacci-test.exe",
+				"envFile": "${workspaceFolder}/build/x86_64-w64-mingw32_Debug/run.env"
 			},
 			"linux": {
 				"MIMode": "gdb",
-				"miDebuggerPath": "/usr/bin/gdb"
-			},
-			"osx": {
-				"program": "${workspaceFolder}/build/x86_64-apple-darwin_Debug/sharedlib-test",
-				"MIMode": "lldb"
+				"miDebuggerPath": "/usr/bin/gdb",
+				"program": "${workspaceRoot}/build/x86_64-pc-linux-gnu_Debug/shared-fibonacci-test",
+				"envFile": "${workspaceFolder}/build/x86_64-pc-linux-gnu_Debug/run.env"
 			}
 		}
 	]
