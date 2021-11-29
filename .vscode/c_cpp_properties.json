@@ -4,6 +4,8 @@
             "name": "Linux",
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
             "includePath": [
 				"${workspaceFolder}/include",
 				"${workspaceFolder}/src/sharedlib",
@@ -15,8 +17,6 @@
                 "__linux__",
                 "_DEBUG"
             ],
-            "cStandard": "c11",
-            "cppStandard": "c++17",
             "forcedInclude": [
                 "${workspaceFolder}/src/main/PCH.hpp"
             ]
@@ -25,6 +25,8 @@
             "name": "Mac",
             "intelliSenseMode": "clang-x64",
             "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
             "macFrameworkPath": [
                 "/System/Library/Frameworks",
                 "/Library/Frameworks"
@@ -39,16 +41,15 @@
                 "__APPLE__",
                 "_DEBUG"
             ],
-            "cStandard": "c11",
-            "cppStandard": "c++17",
             "forcedInclude": [
                 "${workspaceFolder}/src/main/PCH.hpp"
             ]
         },
         {
             "name": "Win32",
-            "intelliSenseMode": "gcc-x64",
-            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
+            "intelliSenseMode": "msvc-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
             "includePath": [
 				"${workspaceFolder}/include",
 				"${workspaceFolder}/src/sharedlib",
@@ -60,8 +61,27 @@
                 "UNICODE",
                 "_UNICODE"
             ],
+            "forcedInclude": [
+                "${workspaceFolder}/src/main/PCH.hpp"
+            ]
+        },
+        {
+            "name": "Win32 (MinGW)",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
+            "includePath": [
+				"${workspaceFolder}/include",
+				"${workspaceFolder}/src/sharedlib",
+                "${workspaceFolder}/src/main"
+            ],
+            "defines": [
+                "_WIN32",
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
             "forcedInclude": [
                 "${workspaceFolder}/src/main/PCH.hpp"
             ]
