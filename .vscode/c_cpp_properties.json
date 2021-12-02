@@ -2,7 +2,7 @@
     "configurations": [
         {
             "name": "Linux",
-            "intelliSenseMode": "gcc-x64",
+            "intelliSenseMode": "linux-gcc-x64",
             "compilerPath": "/usr/bin/g++",
             "cStandard": "c11",
             "cppStandard": "c++17",
@@ -23,7 +23,7 @@
         },
         {
             "name": "Mac",
-            "intelliSenseMode": "clang-x64",
+            "intelliSenseMode": "macos-clang-x64",
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17",
@@ -47,7 +47,7 @@
         },
         {
             "name": "Win32",
-            "intelliSenseMode": "msvc-x64",
+            "intelliSenseMode": "windows-msvc-x64",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "includePath": [
@@ -67,7 +67,7 @@
         },
         {
             "name": "Win32 (MinGW)",
-            "intelliSenseMode": "gcc-x64",
+            "intelliSenseMode": "windows-gcc-x64",
             "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
