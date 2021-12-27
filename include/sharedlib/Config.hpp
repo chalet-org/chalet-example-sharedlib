@@ -3,10 +3,10 @@
 
 #include <sharedlib/Defines.hpp>
 
-#if defined(LIB_SHARED) && defined(__GNUC__) && __GNUC__ >= 4
+#if !defined(LIB_STATIC) && defined(__GNUC__) && __GNUC__ >= 4
 	#define LIB_API_EXPORT __attribute__((__visibility__("default")))
 	#define LIB_API_IMPORT __attribute__((__visibility__("default")))
-#elif defined(LIB_SHARED) && defined(LIB_WIN32)
+#elif !defined(LIB_STATIC) && defined(LIB_WIN32)
 	#define LIB_API_EXPORT __declspec(dllexport)
 	#define LIB_API_IMPORT __declspec(dllimport)
 #else

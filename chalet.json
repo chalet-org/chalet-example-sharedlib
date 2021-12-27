@@ -16,25 +16,28 @@
 			"kind": "staticLibrary",
 			"location": "src/sharedlib",
 			"settings:Cxx": {
-				"pch": "src/sharedlib/PCH.hpp"
+				"pch": "src/sharedlib/PCH.hpp",
+				"defines": [
+					"LIB_STATIC"
+				]
 			}
 		},
 		"fibonacci-shared": {
 			"kind": "sharedLibrary",
 			"location": "src/sharedlib",
 			"settings:Cxx": {
-				"pch": "src/sharedlib/PCH.hpp",
-				"defines": [
-					"LIB_SHARED"
-				]
+				"pch": "src/sharedlib/PCH.hpp"
 			}
 		},
 		"static-fibonacci-test": {
 			"kind": "executable",
-			"runTarget": true,
+			// "runTarget": true,
 			"location": "src/main",
 			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
+				"defines": [
+					"LIB_STATIC"
+				],
 				"staticLinks": [
 					"fibonacci-static"
 				]
