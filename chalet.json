@@ -1,22 +1,37 @@
 {
 	"version": "0.0.1",
 	"workspace": "chalet-example-sharedlib",
-	"abstracts:*": {
+	"abstracts:library": {
 		"language": "C++",
 		"settings:Cxx": {
+			"pch": "src/sharedlib/PCH.hpp",
 			"cppStandard": "c++17",
 			"warnings": "pedantic",
 			"includeDirs": [
+				"src/sharedlib",
 				"include"
 			]
-		}
+		},
+		"files": "src/sharedlib/**.cpp"
+	},
+	"abstracts:executable": {
+		"language": "C++",
+		"settings:Cxx": {
+			"pch": "src/main/PCH.hpp",
+			"cppStandard": "c++17",
+			"warnings": "pedantic",
+			"includeDirs": [
+				"src/main",
+				"include"
+			]
+		},
+		"files": "src/main/**.cpp"
 	},
 	"targets": {
 		"fibonacci-static": {
 			"kind": "staticLibrary",
-			"location": "src/sharedlib",
+			"extends": "library",
 			"settings:Cxx": {
-				"pch": "src/sharedlib/PCH.hpp",
 				"defines": [
 					"LIB_STATIC"
 				]
@@ -24,17 +39,13 @@
 		},
 		"fibonacci-shared": {
 			"kind": "sharedLibrary",
-			"location": "src/sharedlib",
-			"settings:Cxx": {
-				"pch": "src/sharedlib/PCH.hpp"
-			}
+			"extends": "library"
 		},
 		"static-fibonacci-test": {
 			"kind": "executable",
+			"extends": "executable",
 			// "runTarget": true,
-			"location": "src/main",
 			"settings:Cxx": {
-				"pch": "src/main/PCH.hpp",
 				"defines": [
 					"LIB_STATIC"
 				],
@@ -45,8 +56,8 @@
 		},
 		"shared-fibonacci-test": {
 			"kind": "executable",
+			"extends": "executable",
 			"runTarget": true,
-			"location": "src/main",
 			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
 				"links": [
