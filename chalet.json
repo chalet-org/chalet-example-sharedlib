@@ -28,7 +28,7 @@
 		"files": "src/main/**.cpp"
 	},
 	"targets": {
-		"fibonacci-static": {
+		"fibonacci-s": {
 			"kind": "staticLibrary",
 			"extends": "library",
 			"settings:Cxx": {
@@ -37,7 +37,7 @@
 				]
 			}
 		},
-		"fibonacci-shared": {
+		"fibonacci": {
 			"kind": "sharedLibrary",
 			"extends": "library"
 		},
@@ -50,7 +50,7 @@
 					"LIB_STATIC"
 				],
 				"staticLinks": [
-					"fibonacci-static"
+					"fibonacci-s"
 				]
 			}
 		},
@@ -60,7 +60,7 @@
 			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
 				"links": [
-					"fibonacci-shared"
+					"fibonacci"
 				]
 			}
 		}
@@ -74,7 +74,7 @@
 			"buildTargets": [
 				"static-fibonacci-test",
 				"shared-fibonacci-test",
-				"fibonacci-shared"
+				"fibonacci"
 			]
 		},
 		"lib": {
@@ -83,13 +83,13 @@
 			"subdirectory": "lib",
 			"configuration": "Release",
 			"include.!macos": [
-				"${buildDir}/libfibonacci-shared.a"
+				"${buildDir}/libfibonacci.a"
 			],
 			"include.windows": [
-				"${buildDir}/fibonacci-shared.lib"
+				"${buildDir}/fibonacci.lib"
 			],
 			"buildTargets": [
-				"fibonacci-static"
+				"fibonacci-s"
 			]
 		}
 	}
