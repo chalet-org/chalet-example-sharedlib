@@ -57,7 +57,6 @@
 		"shared-fibonacci-test": {
 			"kind": "executable",
 			"extends": "executable",
-			"runTarget": true,
 			"settings:Cxx": {
 				"pch": "src/main/PCH.hpp",
 				"links": [
