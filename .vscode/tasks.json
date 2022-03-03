@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"label": "Build: Debug",
-			"command": "${command:chalet-tools.makeDebugBuild}",
+			"command": "${command:chalet.makeDebugBuild}",
 			"type": "process",
 			"group": {
 				"kind": "build",
