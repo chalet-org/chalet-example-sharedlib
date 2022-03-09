@@ -4,7 +4,7 @@
 	"abstracts:library": {
 		"language": "C++",
 		"settings:Cxx": {
-			"pch": "src/sharedlib/PCH.hpp",
+			"precompiledHeader": "src/sharedlib/PCH.hpp",
 			"cppStandard": "c++17",
 			"warnings": "pedantic",
 			"includeDirs": [
@@ -17,7 +17,7 @@
 	"abstracts:executable": {
 		"language": "C++",
 		"settings:Cxx": {
-			"pch": "src/main/PCH.hpp",
+			"precompiledHeader": "src/main/PCH.hpp",
 			"cppStandard": "c++17",
 			"warnings": "pedantic",
 			"includeDirs": [
@@ -58,7 +58,7 @@
 			"kind": "executable",
 			"extends": "executable",
 			"settings:Cxx": {
-				"pch": "src/main/PCH.hpp",
+				"precompiledHeader": "src/main/PCH.hpp",
 				"links": [
 					"fibonacci"
 				]
