@@ -70,7 +70,7 @@
 			"kind": "bundle",
 			"description": "bin folder",
 			"subdirectory": "bin",
-			"configuration": "Release",
+			"configuration": "RelHighOpt",
 			"buildTargets": [
 				"static-fibonacci-test",
 				"shared-fibonacci-test",
