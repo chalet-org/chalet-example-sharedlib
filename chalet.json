@@ -68,7 +68,7 @@
 	"distribution": {
 		"bin": {
 			"kind": "bundle",
-			"description": "bin folder",
+			"outputDescription": "bin folder",
 			"subdirectory": "bin",
 			"configuration": "RelHighOpt",
 			"buildTargets": [
@@ -79,7 +79,7 @@
 		},
 		"lib": {
 			"kind": "bundle",
-			"description": "lib folder",
+			"outputDescription": "lib folder",
 			"subdirectory": "lib",
 			"configuration": "Release",
 			"include.!macos": [
