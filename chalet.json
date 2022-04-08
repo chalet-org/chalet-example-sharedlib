@@ -32,6 +32,7 @@
 			"kind": "staticLibrary",
 			"extends": "library",
 			"settings:Cxx": {
+				"buildSuffix": "static",
 				"defines": [
 					"LIB_STATIC"
 				]
@@ -39,13 +40,17 @@
 		},
 		"fibonacci": {
 			"kind": "sharedLibrary",
-			"extends": "library"
+			"extends": "library",
+			"settings:Cxx": {
+				"buildSuffix": "shared"
+			}
 		},
 		"static-fibonacci-test": {
 			"kind": "executable",
 			"extends": "executable",
 			// "runTarget": true,
 			"settings:Cxx": {
+				"buildSuffix": "static",
 				"defines": [
 					"LIB_STATIC"
 				],
@@ -58,6 +63,7 @@
 			"kind": "executable",
 			"extends": "executable",
 			"settings:Cxx": {
+				"buildSuffix": "shared",
 				"precompiledHeader": "src/main/PCH.hpp",
 				"links": [
 					"fibonacci"
