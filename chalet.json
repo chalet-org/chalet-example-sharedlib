@@ -1,6 +1,6 @@
 {
 	"version": "0.0.1",
-	"workspace": "chalet-example-sharedlib",
+	"name": "chalet-example-sharedlib",
 	"abstracts:library": {
 		"language": "C++",
 		"settings:Cxx": {
