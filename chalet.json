@@ -76,7 +76,6 @@
 			"kind": "bundle",
 			"outputDescription": "bin folder",
 			"subdirectory": "bin",
-			"configuration": "RelHighOpt",
 			"buildTargets": [
 				"static-fibonacci-test",
 				"shared-fibonacci-test",
@@ -87,7 +86,6 @@
 			"kind": "bundle",
 			"outputDescription": "lib folder",
 			"subdirectory": "lib",
-			"configuration": "Release",
 			"include.!macos": [
 				"${buildDir}/libfibonacci.a"
 			],
