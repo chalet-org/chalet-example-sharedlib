@@ -48,7 +48,6 @@
 		"static-fibonacci-test": {
 			"kind": "executable",
 			"extends": "executable",
-			// "runTarget": true,
 			"settings:Cxx": {
 				"buildSuffix": "static",
 				"defines": [
