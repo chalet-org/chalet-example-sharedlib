@@ -6,7 +6,7 @@
 		"settings:Cxx": {
 			"precompiledHeader": "src/sharedlib/PCH.hpp",
 			"cppStandard": "c++17",
-			"warnings": "pedantic",
+			"warningsPreset": "pedantic",
 			"includeDirs": [
 				"src/sharedlib",
 				"include"
@@ -19,7 +19,7 @@
 		"settings:Cxx": {
 			"precompiledHeader": "src/main/PCH.hpp",
 			"cppStandard": "c++17",
-			"warnings": "pedantic",
+			"warningsPreset": "pedantic",
 			"includeDirs": [
 				"src/main",
 				"include"
