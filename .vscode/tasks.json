@@ -3,8 +3,13 @@
 	"tasks": [
 		{
 			"label": "Build: Debug",
-			"command": "${command:chalet.makeDebugBuild}",
 			"type": "process",
+			"command": "chalet",
+			"args": [
+				"-c",
+				"Debug",
+				"build"
+			],
 			"group": {
 				"kind": "build",
 				"isDefault": true
