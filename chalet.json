@@ -94,6 +94,17 @@
 			"buildTargets": [
 				"fibonacci-s"
 			]
+		},
+		"lib-archive": {
+			"kind": "archive",
+			"format": "zip",
+			"include": [
+				"bin",
+				"lib",
+				"include",
+				"README.md",
+				"LICENSE"
+			]
 		}
 	}
 }
