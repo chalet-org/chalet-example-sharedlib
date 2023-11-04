@@ -13,6 +13,10 @@
 	#ifndef LIB_WIN32
 		#define LIB_WIN32
 	#endif
+#elif defined(__EMSCRIPTEN__)
+	#ifndef LIB_EMSCRIPTEN
+		#define LIB_EMSCRIPTEN
+	#endif
 #else
 static_assert(false, "Unknown platform");
 #endif
