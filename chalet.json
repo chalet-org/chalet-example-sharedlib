@@ -85,11 +85,8 @@
 			"kind": "bundle",
 			"outputDescription": "lib folder",
 			"subdirectory": "lib",
-			"include[:!macos]": [
-				"${buildDir}/libfibonacci.a"
-			],
-			"include[:windows]": [
-				"${buildDir}/fibonacci.lib"
+			"include": [
+				"${buildDir}/${staticLink:fibonacci}"
 			],
 			"buildTargets": [
 				"fibonacci-s"
