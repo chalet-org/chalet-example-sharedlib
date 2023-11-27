@@ -86,7 +86,7 @@
 			"outputDescription": "lib folder",
 			"subdirectory": "lib",
 			"include": [
-				"${buildDir}/${staticLink:fibonacci}"
+				"${buildDir}/${lib:fibonacci}"
 			],
 			"buildTargets": [
 				"fibonacci-s"
