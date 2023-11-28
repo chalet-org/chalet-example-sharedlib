@@ -85,8 +85,8 @@
 			"kind": "bundle",
 			"outputDescription": "lib folder",
 			"subdirectory": "lib",
-			"include": [
-				"${buildDir}/${lib:fibonacci}"
+			"include[toolchain:mingw|:windows]": [
+				"${buildDir}/${ar:fibonacci}"
 			],
 			"buildTargets": [
 				"fibonacci-s"
