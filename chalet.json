@@ -71,28 +71,22 @@
 		}
 	},
 	"distribution": {
-		"bin": {
+		"bundle-lib": {
 			"kind": "bundle",
-			"outputDescription": "bin folder",
-			"subdirectory": "bin",
-			"buildTargets": [
-				"static-fibonacci-test",
-				"shared-fibonacci-test",
-				"fibonacci"
-			]
+			"include": {
+				"${buildDir}/${exe:static-fibonacci-test}": "bin",
+				"${buildDir}/${exe:shared-fibonacci-test}": "bin",
+				"${buildDir}/${so:fibonacci}": "bin",
+				"${buildDir}/${ar:fibonacci-s}": "lib"
+			},
+			"include[toolchain:mingw|:windows]": {
+				"${buildDir}/${ar:fibonacci}": "lib"
+			},
+			"include[toolchain:mingw]": {
+				"libgcc_s_seh-1.dll": ""
+			}
 		},
-		"lib": {
-			"kind": "bundle",
-			"outputDescription": "lib folder",
-			"subdirectory": "lib",
-			"include[toolchain:mingw|:windows]": [
-				"${buildDir}/${ar:fibonacci}"
-			],
-			"buildTargets": [
-				"fibonacci-s"
-			]
-		},
-		"lib-archive": {
+		"archive-lib": {
 			"kind": "archive",
 			"format": "zip",
 			"include": [
