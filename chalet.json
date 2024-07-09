@@ -81,9 +81,6 @@
 			},
 			"include[toolchain:mingw|:windows]": {
 				"${buildDir}/${ar:fibonacci}": "lib"
-			},
-			"include[toolchain:mingw]": {
-				"libgcc_s_seh-1.dll": ""
 			}
 		},
 		"archive-lib": {
