@@ -4,7 +4,6 @@
 	"abstracts:library": {
 		"language": "C++",
 		"settings:Cxx": {
-			"precompiledHeader": "src/sharedlib/PCH.hpp",
 			"cppStandard": "c++17",
 			"warningsPreset": "pedantic",
 			"includeDirs": [
@@ -74,6 +73,7 @@
 		"bundle-lib": {
 			"kind": "bundle",
 			"include": {
+				"include": "",
 				"${buildDir}/${exe:static-fibonacci-test}": "bin",
 				"${buildDir}/${exe:shared-fibonacci-test}": "bin",
 				"${buildDir}/${so:fibonacci}": "bin",
