@@ -4,6 +4,7 @@
 	"abstracts:library": {
 		"language": "C++",
 		"settings:Cxx": {
+			"precompiledHeader": "src/sharedlib/PCH.hpp",
 			"cppStandard": "c++17",
 			"warningsPreset": "pedantic",
 			"includeDirs": [
